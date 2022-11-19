@@ -1,0 +1,6 @@
+lang: ru
+temp: metric
+theme: light
+keyboard shortcut (True/False): False
+keyboard shortcut: CTRL+ALT+W
+choosen_city: 
