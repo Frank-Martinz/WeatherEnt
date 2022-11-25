@@ -115,11 +115,11 @@ class Settings_Wind(QDialog, Ui_Settings):
 
         self.lang_lbl.setText(self.language[0])
         self.type_of_degrees.setText(self.language[1])
-        for i in range(3):
+        for item in range(3):
             self.degree_combobox.removeItem(0)
         self.degree_combobox.insertItems(0, self.language[2])
         self.theme_lbl.setText(self.language[3])
-        for i in range(2):
+        for item in range(2):
             self.theme_combobox.removeItem(0)
         self.theme_combobox.insertItems(0, self.language[4])
         self.on_or_off_message_btn.setText(self.language[5])
@@ -130,20 +130,20 @@ class Settings_Wind(QDialog, Ui_Settings):
 
     def set_theme(self, theme):
         if theme != QColor(255, 255, 255):
-            self.setStyleSheet(f'background-color: rgb(25, 25, 25)')
-            self.lang_lbl.setStyleSheet('color: rgb(255, 255, 255)')
-            self.lang_combobox.setStyleSheet('background-color: rgb(255, 255, 255)')
-            self.type_of_degrees.setStyleSheet('color: rgb(255, 255, 255)')
-            self.degree_combobox.setStyleSheet('background-color: rgb(255, 255, 255)')
-            self.theme_lbl.setStyleSheet('color: rgb(255, 255, 255)')
-            self.theme_combobox.setStyleSheet('background-color: rgb(255, 255, 255)')
-            self.on_or_off_message_btn.setStyleSheet('color: rgb(255, 255, 255)')
-            self.keyboard_shortcut.setStyleSheet('color: rgb(255, 255, 255)')
-            self.city_entry.setStyleSheet('background-color: rgb(255, 255, 255)')
-            self.city_lbl.setStyleSheet('color: rgb(255, 255, 255)')
-            self.change_btn.setStyleSheet('background-color: rgb(255, 255, 255)')
-            self.commit_btn.setStyleSheet('background-color: rgb(255, 255, 255)')
-            self.error_lbl.setStyleSheet('color: rgb(255, 255, 255)')
+            self.setStyleSheet(f'background-color: rgb(50, 50, 50)')
+            self.lang_lbl.setStyleSheet('color: rgb(200, 200, 200)')
+            self.lang_combobox.setStyleSheet('background-color: rgb(200, 200, 200)')
+            self.type_of_degrees.setStyleSheet('color: rgb(200, 200, 200)')
+            self.degree_combobox.setStyleSheet('background-color: rgb(200, 200, 200)')
+            self.theme_lbl.setStyleSheet('color: rgb(200, 200, 200)')
+            self.theme_combobox.setStyleSheet('background-color: rgb(200, 200, 200)')
+            self.on_or_off_message_btn.setStyleSheet('color: rgb(200, 200, 200)')
+            self.keyboard_shortcut.setStyleSheet('color: rgb(200, 200, 200)')
+            self.city_entry.setStyleSheet('background-color: rgb(200, 200, 200)')
+            self.city_lbl.setStyleSheet('color: rgb(200, 200, 200)')
+            self.change_btn.setStyleSheet('background-color: rgb(200, 200, 200)')
+            self.commit_btn.setStyleSheet('background-color: rgb(200, 200, 200)')
+            self.error_lbl.setStyleSheet('color: rgb(200, 200, 200)')
 
     def turn_on_off_keyboard_shortcut(self):
         self.keyboard_shortcut_bool = self.on_or_off_message_btn.isChecked()

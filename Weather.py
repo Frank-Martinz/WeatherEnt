@@ -1,4 +1,5 @@
 import requests
+import pprint
 
 
 def get_weather(city, token):
@@ -18,6 +19,27 @@ def get_weather(city, token):
         data = r.json()
 
         return data
+
+    except Exception:
+        return 'Error'
+
+
+def get_forecast(city, token):
+    try:
+        f = open('app_settings.txt', 'r')
+        data = f.read().split('\n')
+
+        lang = data[0][6:]
+        degree = data[1][6:]
+
+
+        lat, lon = get_coords(city, token)
+        if lat == lon == 'Error':
+            raise Exception
+
+        r = requests.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={token}&units={degree}&lang={lang}')
+
+        return r.json()
 
     except Exception:
         return 'Error'

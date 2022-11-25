@@ -1,6 +1,6 @@
-lang: ru
+lang: eng
 temp: metric
-theme: light
-keyboard shortcut (True/False): False
+theme: dark
+keyboard shortcut (True/False): True
 keyboard shortcut: CTRL+ALT+W
-choosen_city: 
+choosen_city: Владивосток
